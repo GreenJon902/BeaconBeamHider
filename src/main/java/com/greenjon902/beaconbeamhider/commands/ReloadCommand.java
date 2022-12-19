@@ -42,15 +42,18 @@ public class ReloadCommand implements CommandExecutor {
             return true;
         }
 
+        sender.sendMessage(Component.text("Reloading..."));
+
         try {
             config.loadFrom(new File(beaconBeamHider.getDataFolder(), "config.yml"));
+
+            playerExcludeList.saveTo(new File(beaconBeamHider.getDataFolder(), "playerExcludeList.txt"));
+            playerExcludeList.loadFrom(new File(beaconBeamHider.getDataFolder(), "playerExcludeList.txt"));
         } catch (IOException e) {
             sender.sendMessage(Component.text("An error occurred while reloading this plugin!")
                     .color(TextColor.color(0xFF0000)));
             throw new RuntimeException(e);
         }
-
-        sender.sendMessage(Component.text("Reloading config..."));
 
         return true;
     }
