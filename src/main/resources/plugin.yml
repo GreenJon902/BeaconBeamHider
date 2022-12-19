@@ -1,0 +1,41 @@
+name: BeaconBeamHider
+version: '${project.version}'
+main: com.greenjon902.beaconbeamhider.BeaconBeamHider
+api-version: 1.19
+authors: [ GreenJon902 ]
+description: A plugin to hide beacon beams for certain players for certain beacons.
+website: https://github.com/GreenJon902
+
+commands:
+  showbeacons:
+    usage: /<command>
+    permission: beaconbeamhider.showbeacons
+    description: Show all the beacon beams in the chunk that your in
+
+  hidebeacons:
+    usage: /<command>
+    permission: beaconbeamhider.hidebeacons
+    description: Hide all the beacon beams in the chunk that your in
+
+  togglebeaconhiding:
+    usage: /<command> [playername]
+    permission: beaconbeamhider.togglebeaconhiding
+    description: Toggle whether beacons will be hided for the entire world.
+
+  reload:
+    usage: /<command>
+    permission: beaconbeamhider.reload
+    description: Reload the config
+
+permissions:
+  beaconbeamhider.showbeacons:
+    default: true
+
+  beaconbeamhider.hidebeacons:
+    default: true
+
+  beaconbeamhider.togglebeaconhiding:
+    default: true
+
+  beaconbeamhider.reload:
+    default: op

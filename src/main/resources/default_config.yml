@@ -1,0 +1,17 @@
+# The minimum and maximum heights to disable beacons on
+min_beacon_y: -64
+max_beacon_y: 320
+
+# Which materials should be replaced
+replace_iron: true
+replace_gold: true
+replace_emerald: true
+replace_diamond: true
+replace_netherite: true
+
+# What should they be replaced with
+iron_replacement: WHITE_CONCRETE
+gold_replacement: YELLOW_CONCRETE
+emerald_replacement: LIME_CONCRETE
+diamond_replacement: LIGHT_BLUE_CONCRETE
+netherite_replacement: GRAY_CONCRETE
