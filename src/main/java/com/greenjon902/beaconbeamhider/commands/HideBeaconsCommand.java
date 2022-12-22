@@ -53,7 +53,7 @@ public class HideBeaconsCommand implements CommandExecutor {
         }
 
         for (int x = 0; x < 16; x++) {
-            for (int y = minHeight; y < maxHeight; y++) {
+            for (int y = minHeight; y <= maxHeight; y++) {
                 for (int z = 0; z < 16; z++) {
 
                     Block block = chunk.getBlock(x, y, z);
