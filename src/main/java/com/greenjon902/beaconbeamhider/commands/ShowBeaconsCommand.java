@@ -56,7 +56,7 @@ public class ShowBeaconsCommand implements CommandExecutor {
 
         for (int x = 0; x < 16; x++) {
             for (int y = minHeight; y <= maxHeight; y++) {
-                for (int z = 0; z <= 16; z++) {
+                for (int z = 0; z < 16; z++) {
 
                     Block block = chunk.getBlock(x, y, z);
                     int X = block.getX(); // World coordinates
