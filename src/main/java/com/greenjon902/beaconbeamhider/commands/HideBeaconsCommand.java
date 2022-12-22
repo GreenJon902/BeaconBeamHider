@@ -61,8 +61,12 @@ public class HideBeaconsCommand implements CommandExecutor {
                     int Y = block.getY();
                     int Z = block.getZ();
                     if (block.getType() == Material.BEACON) {
-                        player.sendBlockChange(block.getLocation().add(0, -1, 0),
-                                world.getBlockData(X, Y - 1, Z));
+                        if (Checker.check_beacon_at(X, Y, Z, world, config)) {
+                            player.sendBlockChange(
+                                    block.getLocation().add(0, -1, 0),
+                                    config.getCorrectBlockReplacement(world.getBlockAt(X, Y - 1, Z).getType())
+                                            .createBlockData());
+                        }
                     }
 
                 }
